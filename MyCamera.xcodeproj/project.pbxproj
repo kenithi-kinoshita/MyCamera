@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E44EDD212727EAE00029436D /* EffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44EDD202727EAE00029436D /* EffectView.swift */; };
 		E49CD58727267F6100011FBA /* PHPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49CD58627267F6100011FBA /* PHPickerView.swift */; };
 		E4A84D9527224CA700FC4702 /* MyCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A84D9427224CA700FC4702 /* MyCameraApp.swift */; };
 		E4A84D9727224CA700FC4702 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A84D9627224CA700FC4702 /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E44EDD202727EAE00029436D /* EffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectView.swift; sourceTree = "<group>"; };
 		E49CD58627267F6100011FBA /* PHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPickerView.swift; sourceTree = "<group>"; };
 		E4A84D9127224CA700FC4702 /* MyCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A84D9427224CA700FC4702 /* MyCameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCameraApp.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				E4A84DA4272393BA00FC4702 /* ActivityView.swift */,
 				E4A84D9827224CA800FC4702 /* Assets.xcassets */,
 				E4A84D9A27224CA800FC4702 /* Preview Content */,
+				E44EDD202727EAE00029436D /* EffectView.swift */,
 			);
 			path = MyCamera;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				E49CD58727267F6100011FBA /* PHPickerView.swift in Sources */,
 				E4A84D9727224CA700FC4702 /* ContentView.swift in Sources */,
 				E4A84DA5272393BA00FC4702 /* ActivityView.swift in Sources */,
+				E44EDD212727EAE00029436D /* EffectView.swift in Sources */,
 				E4A84DA3272252E300FC4702 /* ImagePickerView.swift in Sources */,
 				E4A84D9527224CA700FC4702 /* MyCameraApp.swift in Sources */,
 			);
