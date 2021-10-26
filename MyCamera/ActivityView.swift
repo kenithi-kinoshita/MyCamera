@@ -23,7 +23,8 @@ struct ActivityView: UIViewControllerRepresentable {
     }
 
     // Viewが更新されたときに実行
-    func updateUIViewController(_ uiViewController: UIActivityViewController, context: UIViewControllerRepresentableContext<ActivityView>) {
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: UIViewControllerRepresentableContext<ActivityView>)
+    {
          //処理なし
     }
 }

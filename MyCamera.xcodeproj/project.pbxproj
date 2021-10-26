@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E49CD58727267F6100011FBA /* PHPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49CD58627267F6100011FBA /* PHPickerView.swift */; };
 		E4A84D9527224CA700FC4702 /* MyCameraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A84D9427224CA700FC4702 /* MyCameraApp.swift */; };
 		E4A84D9727224CA700FC4702 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A84D9627224CA700FC4702 /* ContentView.swift */; };
 		E4A84D9927224CA800FC4702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4A84D9827224CA800FC4702 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E49CD58627267F6100011FBA /* PHPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPickerView.swift; sourceTree = "<group>"; };
 		E4A84D9127224CA700FC4702 /* MyCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4A84D9427224CA700FC4702 /* MyCameraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCameraApp.swift; sourceTree = "<group>"; };
 		E4A84D9627224CA700FC4702 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,8 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				E4A84D9427224CA700FC4702 /* MyCameraApp.swift */,
-				E4A84DA2272252E300FC4702 /* ImagePickerView.swift */,
 				E4A84D9627224CA700FC4702 /* ContentView.swift */,
+				E49CD58627267F6100011FBA /* PHPickerView.swift */,
+				E4A84DA2272252E300FC4702 /* ImagePickerView.swift */,
 				E4A84DA4272393BA00FC4702 /* ActivityView.swift */,
 				E4A84D9827224CA800FC4702 /* Assets.xcassets */,
 				E4A84D9A27224CA800FC4702 /* Preview Content */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49CD58727267F6100011FBA /* PHPickerView.swift in Sources */,
 				E4A84D9727224CA700FC4702 /* ContentView.swift in Sources */,
 				E4A84DA5272393BA00FC4702 /* ActivityView.swift in Sources */,
 				E4A84DA3272252E300FC4702 /* ImagePickerView.swift in Sources */,
