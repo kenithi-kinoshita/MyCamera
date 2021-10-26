@@ -40,7 +40,7 @@ struct ContentView: View {
                 isShowAction = true
 
             }) {
-                Text("カメラを起動する")
+                Text("投稿画像を選択する")
                     // 横いっぱい
                     .frame(maxWidth: .infinity)
                     // 高さ50ポイントを指定
@@ -73,8 +73,8 @@ struct ContentView: View {
             // 状態変数：$isShowActionに変化があったら実行
             .actionSheet(isPresented: $isShowAction) {
                 // ActionSheet を表示する
-                ActionSheet(title: Text("確認"),
-                            message: Text("選択してください"),
+                ActionSheet(title: Text("画像選択確認"),
+                            message: Text("カメラで撮影するか\nフォトライブラリーから画像を選択してください"),
                             buttons: [
                                 .default(Text("カメラ"), action: {
                                     // カメラを選択
