@@ -15,6 +15,7 @@
 		E4A84D9C27224CA800FC4702 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4A84D9B27224CA800FC4702 /* Preview Assets.xcassets */; };
 		E4A84DA3272252E300FC4702 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A84DA2272252E300FC4702 /* ImagePickerView.swift */; };
 		E4A84DA5272393BA00FC4702 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A84DA4272393BA00FC4702 /* ActivityView.swift */; };
+		E4D47A40272A91660004A934 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D47A3F272A91660004A934 /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		E4A84D9B27224CA800FC4702 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E4A84DA2272252E300FC4702 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		E4A84DA4272393BA00FC4702 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		E4D47A3F272A91660004A934 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				E4A84D9427224CA700FC4702 /* MyCameraApp.swift */,
 				E4A84D9627224CA700FC4702 /* ContentView.swift */,
+				E4D47A3F272A91660004A934 /* UIImageExtension.swift */,
 				E49CD58627267F6100011FBA /* PHPickerView.swift */,
 				E4A84DA2272252E300FC4702 /* ImagePickerView.swift */,
 				E4A84DA4272393BA00FC4702 /* ActivityView.swift */,
@@ -151,6 +154,7 @@
 			files = (
 				E49CD58727267F6100011FBA /* PHPickerView.swift in Sources */,
 				E4A84D9727224CA700FC4702 /* ContentView.swift in Sources */,
+				E4D47A40272A91660004A934 /* UIImageExtension.swift in Sources */,
 				E4A84DA5272393BA00FC4702 /* ActivityView.swift in Sources */,
 				E44EDD212727EAE00029436D /* EffectView.swift in Sources */,
 				E4A84DA3272252E300FC4702 /* ImagePickerView.swift in Sources */,
