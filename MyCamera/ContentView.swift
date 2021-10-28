@@ -23,19 +23,11 @@ struct ContentView: View {
         // 縦方向にレイアウト
         VStack {
             Spacer()
-            // 撮影した写真がある時
-            if let unwrapCaptureImage = captureImage {
-                // 撮影写真を表示
-                Image(uiImage: unwrapCaptureImage)
-                    // リサイズ
-                    .resizable()
-                    // アスペクト比を維持して画面内に
-                    .aspectRatio(contentMode: .fit)
-            }
-            Spacer()
             // 「カメラを起動する」ボタン
             Button(action: {
                 // ボタンをタップした時のアクション
+                // 撮影写真を初期化する
+                captureImage = nil
                 // ActionSheet を表示する
                 isShowAction = true
 
@@ -56,17 +48,23 @@ struct ContentView: View {
             // sheetを表示
             // isPresentedで指定した状態変数がtrueのとき実行
             .sheet(isPresented: $isShowSheet) {
-                // フォトライブラリーが選択された
-                if isPhotolibrary {
-                    // PHPickerViewController（フォトライブラリー）を表示
-                    PHPickerView (
-                        isShowSheet: $isShowSheet,
-                        captureImage: $captureImage)
+                if let unwrapCaptureImage = captureImage{
+                    // 撮影した写真がある→EffectViewを表示する
+                    EffectView(isShowSheet: $isShowSheet, captureImage: unwrapCaptureImage)
+                    
                 } else {
-                    // UIImagePickerController（写真撮影）を表示
-                    ImagePickerView(
-                        isShowSheet: $isShowSheet,
-                        captureImage: $captureImage)
+                // フォトライブラリーが選択された
+                    if isPhotolibrary {
+                    // PHPickerViewController（フォトライブラリー）を表示
+                        PHPickerView (
+                            isShowSheet: $isShowSheet,
+                            captureImage: $captureImage)
+                    } else {
+                        // UIImagePickerController（写真撮影）を表示
+                        ImagePickerView(
+                            isShowSheet: $isShowSheet,
+                            captureImage: $captureImage)
+                    }
                 }
             }// カメラ起動Button sheet end
             
@@ -99,30 +97,6 @@ struct ContentView: View {
                                 .cancel(),
                             ]) // ActionSheet end
             } // .actionSheet end
-            
-            // 「SNSに投稿する」ボタン
-            Button(action: {
-                // ボタンをタップしたときのアクション
-                // 撮影した写真があるときだけ
-                if let _ = captureImage {
-                    isShowActivity = true
-                }
-                
-            }) {
-                Text("SNSに投稿する")
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 50)
-                    .multilineTextAlignment(.center)
-                    .background(Color.blue)
-                    .foregroundColor(Color.white)
-            } // 「SNSに投稿する」Button end
-            .padding()
-            // sheetを表示
-            // isPresentedで指定した状態変数がtrueのとき実行
-            .sheet(isPresented: $isShowActivity) {
-                // UIActivityViewController（シェア機能）を表示
-                ActivityView(shareItems: [captureImage!])
-            }
         } // VStack end
     } // body end
 } // ContentView end

@@ -38,11 +38,13 @@ struct PHPickerView: UIViewControllerRepresentable {
                         print("使用できる写真がありません")
                     }
                 }
+                //　sheetを閉じない
+                parent.isShowSheet = true
             } else {
                 print("選択された写真はありません")
+                // sheetを閉じる
+                parent.isShowSheet = false
             }
-            // sheetを閉じる
-            parent.isShowSheet = false
         } // picker end
     } // Coordinator end
     
