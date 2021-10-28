@@ -64,9 +64,9 @@
 				E49CD58627267F6100011FBA /* PHPickerView.swift */,
 				E4A84DA2272252E300FC4702 /* ImagePickerView.swift */,
 				E4A84DA4272393BA00FC4702 /* ActivityView.swift */,
+				E44EDD202727EAE00029436D /* EffectView.swift */,
 				E4A84D9827224CA800FC4702 /* Assets.xcassets */,
 				E4A84D9A27224CA800FC4702 /* Preview Content */,
-				E44EDD202727EAE00029436D /* EffectView.swift */,
 			);
 			path = MyCamera;
 			sourceTree = "<group>";

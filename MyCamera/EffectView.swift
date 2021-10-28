@@ -33,7 +33,34 @@ struct EffectView: View {
             // エフェクトボタン
             Button(action: {
                 // ボタンをタップした時のアクション
+                // フィルタ名を指定
+                let filterName = "CIPhotoEffectMono"
+                // 元々の画像の回転速度を取得
+                let rotate = captureImage.imageOrientation
+                // UIImage形式の画像をCIImage形式に変換
+                let inputImage = CIImage(image: captureImage)
                 
+                // フィルタの種別を引数で指定された種類を指定してCIFilterのインスタンスを取得
+                guard let effectFilter = CIFilter(name: filterName) else {
+                    return
+                }
+                
+                // フィルタ加工のパラメータを初期化
+                effectFilter.setDefaults()
+                // インスタンスにフィルタ加工する元画像の設定
+                effectFilter.setValue(inputImage, forKey: kCIInputImageKey)
+                // フィルタ加工を行う情報を生成
+                guard let outputImage = effectFilter.outputImage else {
+                    return
+                }
+                // CIContestのインスタンスを取得
+                let ciContext = CIContext(options: nil)
+                // フィルタ加工後の画像をCIContext上に描画し、結果をcgImageとしてCGImage形式の画像を取得
+                guard let cgImage = ciContext.createCGImage(outputImage, from: outputImage.extent) else {
+                    return
+                }
+                // フィルタ加工後の画像をCGImage形式からUIImage形式に変換。その際に回転角度を指定。
+                showImage = UIImage(cgImage: cgImage, scale: 1.0, orientation: rotate)
             }) {
                 Text("エフェクト")
                     .frame(maxWidth: .infinity)
@@ -46,6 +73,8 @@ struct EffectView: View {
             // シェアボタン
             Button(action: {
                 // ボタンをタップした時のアクション
+                // UIActivityViewControllerをモーダル表示する
+                isShowActivity = true
             }) {
                 Text("シェア")
                     .frame(maxWidth: .infinity)
@@ -54,10 +83,16 @@ struct EffectView: View {
                     .background(Color.blue)
                     .foregroundColor(Color.white)
             } // シェアボタン end
+            .sheet(isPresented: $isShowActivity) {
+                // UIActivityViewControllerを表示する
+                ActivityView(shareItems: [showImage!])
+            }
             .padding()
             // 閉じるボタン
             Button(action: {
                 // ボタンをタップした時のアクション
+                // エフェクト編集画面を閉じる
+                isShowSheet = false
             }) {
                 Text("閉じる")
                     .frame(maxWidth: .infinity)
